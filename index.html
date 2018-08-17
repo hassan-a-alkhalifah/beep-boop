@@ -12,20 +12,20 @@
     <div class="container">
       <h1>Beep! Boop!</h1>
       <img src="img/hal-9000.png" alt="hal 9000">
-      <div class="form-message-container">
+      <div class="form-message-main-container">
         <div class="screen">
           <form class="form">
-            <label class="label" for="userInput">Please enter a number</label>
+            <label class="input-label" for="userInput">Please enter a number</label>
             <input class="userInput" type="number">
             <button class="submit-btn" type="submit">Submit</button>
           </form>
-
-          <p class="no-white-space-message">Input required. Please enter only numbers.</p>
+          <div class="message-container-hide-scroll">
+            <div class="message-container">
+              <p class="no-white-space-message">Input required. Please enter only numbers.</p>
+              <p class="message"></p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="output-container">
-        <p class="message"></p>
       </div>
     </div>
   </body>

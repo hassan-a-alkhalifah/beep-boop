@@ -1,12 +1,16 @@
 body {
-  background-color: #000;
+  background-color: #1A2012;
+}
+body-error {
+  background-color: #361A19;
 }
 img {
   display: block;
-  width: 700px;
+  width: 400px;
   margin: 0 auto;
+  filter: drop-shadow(0 0 10px #000);
 }
-.form-message-container {
+.form-message-main-container {
   width: 600px;
   height: 400px;
   margin: 20px auto 0 auto;
@@ -24,7 +28,7 @@ img {
   border-radius: 10px;
 }
 .form {
-  padding-top: 110px;
+  padding-top: 60px;
 }
 .userInput {
   border: 2px solid #5D8D91;
@@ -36,12 +40,13 @@ label {
   font-size: 14px!important;
   color: #0EBAD0!important;
   text-shadow: 0 0 5px #96d5dd, 0 0 1px #e8f1f2;
+  margin-right: 20px;
 }
 .submit-btn {
   width: 80px;
   height: 80px;
   display: block;
-  margin: 60px auto 30px auto;
+  margin: 30px auto 30px auto;
   background-image: radial-gradient(#21DDFA, #37729A);
   border: none;
   border-radius: 5px;
@@ -52,7 +57,25 @@ label {
 .submit-btn:active {
   background-image: radial-gradient(#37729A, #21DDFA);
 }
+.message-container-hide-scroll {
+  position: relative;
+  overflow: hidden;
+  width: 530px;
+  height: 120px;
+}
+.message-container {
+  position: absolute;
+  top: 0;
+  left:17px;
+  width: 530px;
+  height: 120px;
+  overflow-y: scroll;
+}
 .no-white-space-message {
   display: none;
+  text-shadow: 0 0 5px #96d5dd, 0 0 5px #e8f1f2;
+}
+.message {
+  padding: 0 20px;
   text-shadow: 0 0 5px #96d5dd, 0 0 5px #e8f1f2;
 }

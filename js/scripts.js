@@ -35,7 +35,8 @@ $(document).ready(function() {
           range.push(numberToCheck);
         }
       }
-      $(".message").text(range);
+      var newMessage = range.join(" ");
+      $(".message").text(newMessage);
     }
   });
 });
