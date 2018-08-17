@@ -7,6 +7,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(".white-space-message").hide();
     $(".no-special-character-message").hide();
+    $(".not-Divisible-By-3-Message").hide();
     $(".message").text("");
     var userInput = $(".userInput").val();
 
@@ -23,20 +24,24 @@ $(document).ready(function() {
         }
       });
       var joinedRevisedNumber = parseInt(revisedNumber.join(""));
-      var range = [];
-      for(var i = 0; i <= joinedRevisedNumber; i++) {
-        var numberToCheck = i.toString();
-        if(numberToCheck.includes("1")) {
-          range.push("Boop!");
-        } else if(numberToCheck.includes("0")) {
-          range.push("Beep!");
-        } else {
-            range.push(numberToCheck);
+      if(joinedRevisedNumber % 3 !== 0) {
+        $(".not-divisible-by-3-message").show();
+      } else {
+        var range = [];
+        for(var i = 0; i <= joinedRevisedNumber; i++) {
+          var numberToCheck = i.toString();
+          if(numberToCheck.includes("1")) {
+            range.push("Boop!");
+          } else if(numberToCheck.includes("0")) {
+            range.push("Beep!");
+          } else {
+              range.push(numberToCheck);
+          }
         }
-      }
 
-      $(".message").text(range);
-      console.log(range);
+        $(".message").text(range);
+        console.log(range);
+      }
     }
   });
 });
