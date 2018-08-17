@@ -13,6 +13,11 @@ _The website is designed to convert any number that contains 0 into the word "Be
 * Program displays entered value."
   * **Example Input: "123"**
   * **Example Output: ["123"]**
+* Program clears previous output when there is a new submission."
+  * **Example Original Output: "123"**
+  * **Example New Input: "456"**
+  * **Example Remove Original Output [""]**
+  * **Example Output: ["456"]**
 * Program prevents user from entering only white space"
   * **Example Input: " "**
   * **Example Output: ["Input required. Please enter only numbers."]**
