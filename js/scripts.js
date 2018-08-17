@@ -28,6 +28,8 @@ $(document).ready(function() {
         var numberToCheck = i.toString();
         if(numberToCheck.includes("1")) {
           range.push("Boop!");
+        } else if(numberToCheck.includes("0")) {
+          range.push("Beep!");
         } else {
             range.push(numberToCheck);
         }
