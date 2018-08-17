@@ -36,9 +36,15 @@ $(document).ready(function() {
 
     $(".no-white-space-message").hide();
     $(".message").empty();
-    
-    var userInput = $(".userInput").val();
+
+    var userInput = $(".user-input").val();
     if(userInput === "" || userInput === /\s/g) {
+      $("body").removeClass("body-error");
+      $(".form-message-main-container").removeClass("form-message-main-container-error");
+      $(".screen").removeClass("screen-error");
+      $(".input-label").removeClass("input-label-error");
+      $(".user-input").removeClass("user-input-error");
+      $(".submit-btn").removeClass("submit-btn-error");
       $(".no-white-space-message").show();
     } else {
       var splitInput = userInput.split("");
@@ -47,6 +53,13 @@ $(document).ready(function() {
       var newMessageArray = checkDigitType(joinedRevisedNumber);
       var newMessage = newMessageArray.join(" ");
       $(".message").text(newMessage);
+
+      $("body").addClass("body-error");
+      $(".form-message-main-container").addClass("form-message-main-container-error");
+      $(".screen").addClass("screen-error");
+      $(".input-label").addClass("input-label-error");
+      $(".user-input").addClass("user-input-error");
+      $(".submit-btn").addClass("submit-btn-error");
     }
   });
 });
