@@ -5,10 +5,8 @@
 $(document).ready(function() {
   $(".form").submit(function(event) {
     event.preventDefault();
-    $(".white-space-message").hide();
-    $(".no-special-character-message").hide();
-    $(".not-Divisible-By-3-Message").hide();
-    $(".message").text("");
+    $(".no-white-space-message").hide();
+    $(".message").empty();
     var userInput = $(".userInput").val();
 
     if(userInput === "" || userInput === /\s/g) {
@@ -24,24 +22,20 @@ $(document).ready(function() {
         }
       });
       var joinedRevisedNumber = parseInt(revisedNumber.join(""));
-      if(joinedRevisedNumber % 3 !== 0) {
-        $(".not-divisible-by-3-message").show();
-      } else {
-        var range = [];
-        for(var i = 0; i <= joinedRevisedNumber; i++) {
-          var numberToCheck = i.toString();
-          if(numberToCheck.includes("1")) {
-            range.push("Boop!");
-          } else if(numberToCheck.includes("0")) {
-            range.push("Beep!");
-          } else {
-              range.push(numberToCheck);
-          }
+      var range = [];
+      for(var i = 0; i <= joinedRevisedNumber; i++) {
+        var numberToCheck = i.toString();
+        if(numberToCheck.includes("0")) {
+          range.push("Boop!");
+        } else if(numberToCheck.includes("1")) {
+          range.push("Beep!");
+        } else if(parseInt(numberToCheck) % 3 === 0) {
+          range.push("I'm sorry Bill, I'm afraid I can't do that.");
+        } else {
+          range.push(numberToCheck);
         }
-
-        $(".message").text(range);
-        console.log(range);
       }
+      $(".message").text(range);
     }
   });
 });
