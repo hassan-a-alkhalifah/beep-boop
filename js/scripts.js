@@ -22,9 +22,16 @@ $(document).ready(function() {
           revisedNumber.push(digit);
         }
       });
-
-      $(".message").text(revisedNumber);
-      console.log(revisedNumber);
+      var joinedRevisedNumber = parseInt(revisedNumber.join(""));
+      var range = [];
+      var test = 0;
+      console.log(joinedRevisedNumber);
+      for(var i = 0; i <= joinedRevisedNumber; i++) {
+        console.log(i)
+        range.push(i);
+      }
+      $(".message").text(range);
+      console.log(range);
     }
   });
 });
