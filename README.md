@@ -10,6 +10,9 @@ _The website is designed to convert any number that contains 0 into the word "Be
 
 ## Specifications
 
+* Program displays entered value."
+  * **Example Input: "123"**
+  * **Example Output: ["123"]**
 * Program prevents user from entering only white space"
   * **Example Input: " "**
   * **Example Output: ["Input required. Please enter only numbers."]**
