@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Beep Boop</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/stylesheet.css" rel="styelsheet" type="text/css" media="all">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
     <div class="container">
       <h1>Beep! Boop!</h1>
-      
+
       <form class="form">
         <label for="userInput">Please enter a number</label>
-        <input class="userInput" type="text">
+        <input class="userInput" type="number">
         <button type="submit">Submit</button>
       </form>
-
-      <p class="message"></p>
+      <div class="output-container">
+        <p class="white-space-message">Input required. Please enter only numbers.</p>
+        <p class="message"></p>
+      </div>
     </div>
   </body>
 </html>

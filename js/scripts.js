@@ -5,9 +5,12 @@
 $(document).ready(function() {
   $(".form").submit(function(event) {
     event.preventDefault();
-
+    $(".white-space-message").hide();
     var userInput = $(".userInput").val();
-
-    $(".message").text(userInput);
+    if(userInput === "" || userInput === /\s/g) {
+      $(".white-space-message").show();
+    } else {
+      $(".message").text(userInput);
+    }
   });
 });
