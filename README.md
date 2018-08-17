@@ -24,6 +24,9 @@ _The website is designed to convert any number that contains 0 into the word "Be
 * Program prevents user from entering any character except numbers"
   * **Example Input: AAA&&&!!!__**
   * **Example Output: ["Unable to except input. Please enter only numbers."]**
+  * Program to generate a range of numbers from 0 to the inputted number"
+    * **Example Input: 10**
+    * **Example Output: ["1, 2, 3, 4, 5, 6, 7, 8, 9, 10"]**
 * Program replaces 0 with "Beep!"
   * **Example Input: 0**
   * **Example Output: ["Beep!"]**

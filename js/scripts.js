@@ -24,12 +24,15 @@ $(document).ready(function() {
       });
       var joinedRevisedNumber = parseInt(revisedNumber.join(""));
       var range = [];
-      var test = 0;
-      console.log(joinedRevisedNumber);
       for(var i = 0; i <= joinedRevisedNumber; i++) {
-        console.log(i)
-        range.push(i);
+        var numberToCheck = i.toString();
+        if(numberToCheck.includes("1")) {
+          range.push("Boop!");
+        } else {
+            range.push(numberToCheck);
+        }
       }
+
       $(".message").text(range);
       console.log(range);
     }
