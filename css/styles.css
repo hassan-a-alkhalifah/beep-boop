@@ -52,9 +52,15 @@ img {
   transition: background-image 2s, box-shadow 2s, color 4s;
 }
 .form {
-  padding-top: 60px;
+  padding-top: 50px;
 }
-.user-input {
+.display-block {
+  display: block;
+}
+.display-block:nth-child(1) {
+  margin-bottom: 10px;
+}
+.user-input, .user-name-input {
   border: 2px solid #5D8D91;
   background-color: #000;
   box-shadow: 0 0 10px 1px #21DDFA;
@@ -62,17 +68,17 @@ img {
   padding-left: 10px;
   transition: background-color 1s, box-shadow 1s, text-shadow 1s;
 }
-.user-input:focus {
+.user-input:focus, .user-name-input:focus {
   outline: 0;
 }
-.user-input-error {
+.user-input-error{
   border: 2px solid #9D3029;
   background-color: #0b0505;
   box-shadow: 0 0 20px 2px #632220;
   text-shadow: 0 0 5px #b27d7a, 0 0 5px #c7bfbf;
   transition: border 2s, background-color 2s, box-shadow 2s, text-shadow 4s;
 }
-.input-label {
+.input-label, .input-name-label {
   font-size: 14px!important;
   color: #0EBAD0!important;
   text-shadow: 0 0 5px #96d5dd, 0 0 1px #e8f1f2;

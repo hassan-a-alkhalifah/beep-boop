@@ -18,13 +18,19 @@
       <div class="form-message-main-container">
         <div class="screen">
           <form class="form">
-            <label class="input-label" for="user-input">Please enter a number</label>
-            <input class="user-input" type="number">
+            <div class="display-block">
+              <label class="input-name-label" for="user-name-input">Please enter your name</label>
+              <input class="user-name-input" type="text">
+            </div>
+            <div class="display-block">
+              <label class="input-label" for="user-input">Please enter a number</label>
+              <input class="user-input" type="number">
+            </div>
             <button class="submit-btn" type="submit">Submit</button>
           </form>
           <div class="message-container-hide-scroll">
             <div class="message-container">
-              <p class="no-white-space-message">Input required. Please enter only numbers.</p>
+              <p class="no-white-space-message">Input required <span class="user-name"></span>. Please enter only numbers.</p>
               <p class="message"></p>
             </div>
           </div>
