@@ -8,6 +8,8 @@
 
 _The website is designed to convert any number that contains 0 into the word "Beep!" and any number entered that contains 1 into the word "Boop!". The only catch is if a entered number is divisible by 3 is returned as "I'm sorry, "entered name", I'm afraid I can't do that". Lastly, the user should be able to enter a new number which should clear the previous results and display the updated results._
 
+_You can view the website live [*here*](https://hassan-a-alkhalifah.github.io/beep-boop/)_
+
 ## Specifications
 
 * Program displays entered value."
